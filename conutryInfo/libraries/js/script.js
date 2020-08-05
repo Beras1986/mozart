@@ -1,0 +1,32 @@
+    $('#goBtn').click(function(){
+
+        $(this).attr("disabled", "disabled");
+
+        $.ajax({
+            url: "libraries/php/getCountryInfo.php",
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                country: $('#countrySelect').val(),
+                lang: $('#languageSelect').val()
+            },
+            success: function(result){
+
+                console.log(result);
+
+                if(result.status.name == "ok"){
+                    $('#table1').css("visibility", "visible");
+                    $('#continent').html(result['data'][0]['continent']);
+                    $('#capital').html(result['data'][0]['capital']);
+                    $('#languages').html(result['data'][0]['languages']);
+                    $('#population').html(result['data'][0]['population']);
+                    $('#area').html(result['data'][0]['areaInSqKm']);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                alert(errorThrown);
+            }
+        });
+
+        setTimeout('$("#goBtn").removeAttr("Disabled")', 1500);
+    });
