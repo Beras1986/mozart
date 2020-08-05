@@ -1,0 +1,25 @@
+body {
+    background-color:antiquewhite;
+}
+
+#goBtn, #submit {
+    background: lightgrey;
+    width: 75px;
+    margin: 5px;
+}
+
+.select {
+    background-color: lightgrey;
+    position: relative;
+    margin: 5px;
+}
+
+#table1, #table2 {
+    display: block;
+    visibility: hidden;
+}
+
+#locationForm {
+    margin-left: 5px;
+    margin-top: 20px;
+}
