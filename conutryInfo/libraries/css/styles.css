@@ -1,0 +1,20 @@
+body {
+    background-color:antiquewhite;
+}
+
+#goBtn {
+    background: lightgrey;
+    width: 75px;
+    margin: 5px;
+}
+
+.select {
+    background-color: lightgrey;
+    position: relative;
+    margin: 5px;
+}
+
+#table1 {
+    display: block;
+    visibility: hidden;
+}
